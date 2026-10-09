@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bg3",
+    "title": "BG3 y cualidad energética",
+    "status": "Marco de BioGeometry",
+    "proposal": "BioGeometry describe BG3 mediante tres cualidades: verde negativo horizontal, armónico superior del ultravioleta y armónico superior del oro. Su FAQ aclara que sumarlas no produce por sí mismo la cualidad armonizadora.",
+    "contrast": "Aquí se usa «cualidad» como término del modelo. No se asigna a BG3 una frecuencia en Hz ni se presenta el concepto como una medición electromagnética de la aplicación.",
+    "practice": "Al leer una fuente, anota qué significa BG3 para el autor y qué instrumento, escala y procedimiento emplea. Mantén esa descripción junto a la referencia.",
+    "sources": [{"label": "BioGeometry · FAQ: BG3", "url": "https://www.biogeometry.ca/biogeometry-faq"}]
+  },
+  {
+    "id": "sacred-design",
+    "title": "Diseño sagrado, Djed, Ankh y estrella",
+    "status": "Resumen aportado · pendiente de cotejo",
+    "proposal": "El material aportado relaciona símbolos egipcios y una «Estrella de la Creación» con centros emisores de BG3. Presenta el diseño sagrado como una relación entre forma, proporción y espacio.",
+    "contrast": "Faltan páginas o pasajes específicos para atribuir esas formulaciones al libro Secrets of Sacred Design. La activación permanente de un espacio y la neutralización electromagnética no están verificadas en este proyecto.",
+    "practice": "Estudia ejes, simetrías, repeticiones y proporciones de una imagen con procedencia conocida. Hasta localizar el patrón documental, la aplicación no reconstruye ni etiqueta una estrella como emisor auténtico.",
+    "sources": [{"label": "BioGeometry · Physics of Quality: contexto conceptual", "url": "https://www.biogeometry.ca/physics-of-quality"}]
+  },
+  {
+    "id": "shape-body",
+    "title": "Forma, resonancia y firmas",
+    "status": "Propuesta del autor",
+    "proposal": "Karim plantea relaciones cualitativas entre formas, colores, sonidos y resonancia. BioGeometry presenta las firmas como diagramas lineales vinculados a patrones de energía de órganos.",
+    "contrast": "Esa descripción no demuestra que observar una firma active el parasimpático, repare tejidos o restablezca la función de un órgano. Tales efectos necesitarían resultados clínicos y mediciones independientes.",
+    "practice": "Compara el escaneo, el contorno documental y la variante de curvas. Registra dificultad del trazo y atención percibida en el cuaderno, sin convertirlas en una prueba de cambios fisiológicos.",
+    "sources": [{"label": "BioGeometry · Physics of Quality", "url": "https://www.biogeometry.ca/physics-of-quality"}, {"label": "BioGeometry · FAQ: BioSignatures", "url": "https://www.biogeometry.ca/biogeometry-faq"}]
+  },
+  {
+    "id": "pendulums",
+    "title": "Radiestesia física, BG16 e IKUP",
+    "status": "Descripción de instrumentos",
+    "proposal": "La web de BioGeometry distingue radiestesia física y mental. Su FAQ describe el BG16 como calibrado para BG3 sin ajuste previo y el IKUP como calibrado mediante formas geométricas; remite la enseñanza de su uso a clases.",
+    "contrast": "El ajuste de cuerda y el giro horario descritos en el resumen aportado requieren una referencia específica. Un giro del péndulo no se convierte aquí en diagnóstico de un órgano ni en lectura instrumental de exposición electromagnética.",
+    "practice": "Para documentar una observación, registra instrumento, longitud de cuerda, posición, movimiento y repeticiones. Diferencia la observación del significado que el operador le atribuye. No uses la ficha para modificar medicamentos, suplementos o tratamientos.",
+    "sources": [{"label": "BioGeometry · Physical Radiesthesia", "url": "https://www.biogeometry.ca/radiesthesia"}, {"label": "BioGeometry · FAQ: BG16 e IKUP", "url": "https://www.biogeometry.ca/biogeometry-faq"}]
+  },
+  {
+    "id": "space",
+    "title": "Lectura del espacio y estrés geopático",
+    "status": "Hipótesis del material aportado",
+    "proposal": "El resumen aportado propone mapear redes Hartmann y Curry y colocar tiras o resonadores sobre intersecciones. Atribuye a esa intervención una modificación de la cualidad del espacio.",
+    "contrast": "En este proyecto no se ha comprobado que esas redes drenen vitalidad celular ni que las figuras reduzcan la exposición física a campos electromagnéticos. La OMS evalúa esa exposición mediante evidencia y estándares; una respuesta de péndulo no certifica protección.",
+    "practice": "Dibuja un plano con escala, orientación, ubicación de muebles y fuentes eléctricas. Identifica por separado las marcas del operador y las lecturas de instrumentos, con fecha, unidad y método. El plano sirve para documentar, no para certificar una vivienda segura.",
+    "sources": [{"label": "OMS · Campos electromagnéticos", "url": "https://www.who.int/health-topics/electromagnetic-fields"}]
+  }
+]
