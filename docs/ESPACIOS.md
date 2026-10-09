@@ -29,3 +29,9 @@ Cambiar punto, figura, fase o procedencia, o salir de Espacios, desmonta el comp
 Compilación TypeScript/Vite; algoritmo con marcadores sintéticos (incluido rechazo de dos regiones), giros horario/antihorario y oscilación. Flujo de navegador con video sintético: captura, guardado de trayectoria, apagado al navegar, datos locales, exportación, rechazo de importación inválida, recuperación al recargar y pantallas de 320, 390, 768, 1024 y 1440 píxeles. Eliminación del punto con cancelación y aceptación.
 
 No se ha probado todavía una cámara física ni el seguimiento con un péndulo real. No se ha desplegado esta versión.
+
+## Ubicación geográfica
+
+Captura puntual mediante la API de geolocalización del navegador, iniciada exclusivamente por el usuario. Se guardan latitud, longitud, precisión estimada, fecha y procedencia dentro del inmueble; el plano interior conserva coordenadas porcentuales y norte manual. La ubicación del navegador puede proceder de GPS, redes u otros proveedores. No se deducen posiciones interiores, BG3 ni anomalías. También admite coordenadas manuales, sin precisión declarada.
+
+Las coordenadas permanecen en localStorage y se incluyen en el respaldo JSON. Solo al abrir el enlace se transmiten a OpenStreetMap; no se incorpora un mapa ni solicitudes externas automáticas. Se conservan respaldos v1 sin ubicación. Importaciones con coordenadas inválidas se rechazan sin reemplazar el estado. Solicitudes tardías se descartan al salir del módulo, ingresar coordenadas manuales o importar otro respaldo. La captura física en el teléfono del usuario queda pendiente. Referencia técnica: https://www.w3.org/TR/geolocation/ .

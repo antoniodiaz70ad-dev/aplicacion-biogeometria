@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "date": "2026-10-09",
+  "locationTest": "Simulated browser geolocation; physical phone location not tested",
+  "checks": [
+    "No request until button click",
+    "0/0 coordinates accepted",
+    "Reported accuracy displayed",
+    "Permission denial preserves prior location",
+    "Manual coordinate validation",
+    "Late callback discarded after manual entry, navigation and import",
+    "Location in JSON export",
+    "Reload persistence",
+    "Reject invalid location without data loss",
+    "Legacy v1 backup without location retained",
+    "Invalid device timestamp handled",
+    "320/390/768/1440 without overflow",
+    "No automatic requests to map provider"
+  ]
+}
