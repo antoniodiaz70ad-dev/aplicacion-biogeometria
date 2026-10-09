@@ -50,3 +50,14 @@ Los registros se añaden como `baselines` opcional dentro de los respaldos v1 ex
 ### Verificación
 
 `npm run build` verifica TypeScript y construcción. `tests/baseline-flow.cjs` recorre preparación, BG16 sin longitud obligatoria, tres repeticiones, fallo indeterminado, conservación del plano histórico, recarga, exportación/importación, rechazo de respaldo inconsistente, compatibilidad v1, eliminación vinculada y anchos 320/390/768/1024/1440. Para ejecutarlo, instalar Playwright con Chromium y usar `node tests/baseline-flow.cjs` tras el build. Admite `PLAYWRIGHT_MODULE`, `CHROMIUM_MODULE` o `CHROMIUM_EXECUTABLE` para entornos con dependencias externas. Comprobado también el flujo anterior de sesiones, cámara con vídeo sintético y detención de la captura; esto no prueba una cámara física ni valida BG3.
+
+
+## Recorrido único y varillas de cobre
+
+Espacios abre en Lugar → Instrumento → Puntos → Observaciones → Revisión. Nombre, dimensiones y orientación manual se configuran al inicio; GPS y mapa quedan en un desplegable opcional. Las sesiones anteriores, figuras, comparación y cámara siguen disponibles en «Herramientas adicionales», cerrado inicialmente. La captura sólo se monta cuando ese bloque está abierto; cerrarlo detiene la captura por desmontaje.
+
+«Varillas de cobre» guarda respuesta propia, sin longitud de cuerda ni clasificación BG3: cruce, apertura, sin cambio o indeterminado. Cada repetición exige describir el recorrido realmente realizado. Estos controles documentan observaciones radiestésicas; no confirman cruces energéticos, agua, fallas ni una figura curativa. La validación rechaza movimientos de péndulo en registros de varillas, recorridos ausentes y una cualidad incompatible. Los registros anteriores siguen siendo válidos.
+
+La revisión previa muestra datos del lugar, instrumento, ajustes, comprobación y tres respuestas. Permite corregir antes de guardar; guardar añade un único registro y muestra confirmación. Después se puede observar otro punto o cambiar instrumento. Editar coordenadas, dimensiones u orientación limpia las observaciones aún no guardadas. El botón «Aún no hice la comprobación» declara la ausencia de controles y obliga a interpretación indeterminada; no simula una calibración. Eliminar un punto está también disponible en el paso Puntos y conserva la confirmación y eliminación vinculada.
+
+La prueba `tests/baseline-flow.cjs` se actualizó para cubrir el recorrido único, revisión/corrección, varillas y trayectorias obligatorias, compatibilidad de respaldos y adaptación en cinco anchos. Las instrucciones de calibración del péndulo conservan sus fuentes previas; las indicaciones para varillas se identifican como propuesta de registro de la plataforma.
