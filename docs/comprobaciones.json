@@ -1,0 +1,20 @@
+{
+  "testedAt": "2026-10-09T01:44:30.798Z",
+  "status": "passed",
+  "build": "TypeScript strict + Vite production",
+  "assets": "246 PNG hashes, 246 SVGs and 63 source pages",
+  "checks": [
+    "Home loads original vector; no fabricated personal statistics",
+    "Catalogue defaults to 9 reviewed figures; search, full archive, favourites",
+    "Source-page comparison loads; keyboard Escape closes",
+    "SVG exports at 80 mm with source aspect ratio and chosen ink",
+    "Print opens A4 page with selected width and 100 mm calibration",
+    "Tall drawings cannot be clipped by A4 printing",
+    "Timer starts, pauses and completes without waiting a full minute",
+    "Canvas supports drawing, undo and transparent PNG export",
+    "Journal saves real entry and favourite; state survives reload",
+    "All pages fit 320px, 390px, 768px and 1024px; mobile navigation and images load",
+    "Offline HTML loads all embedded figures and source page; SVG export works"
+  ],
+  "consoleErrors": []
+}

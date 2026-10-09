@@ -1,0 +1,146 @@
+[
+  {
+    "id": "page_89_seg_0",
+    "sourceSha256": "30bd3301bfda8f206e9da4cf11fd353ca73a83c11c8283e1a91421d5bad30e04",
+    "refinedSha256": "869d7793fb18f04fa09cad0a01df6a516c231c0d73ae9694e45a5a8abb2fea2c",
+    "inkOverlapVsPreviousVector": 0.89238,
+    "maximumContourDisplacementPixels": 0.8907,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      3
+    ],
+    "contoursSmoothed": 5,
+    "contoursRetained": 0,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_89_seg_1",
+    "sourceSha256": "0a7b657550d51fcf7ba29c4b18dad09f59f44581db64dfb86e6b5e44ff75700a",
+    "refinedSha256": "24988e5b394062934047c84f8dac91c0223edec809206009e676266327363ccb",
+    "inkOverlapVsPreviousVector": 0.9134,
+    "maximumContourDisplacementPixels": 0.8775,
+    "componentsAndHolesAboveOneSourcePixel": [
+      1,
+      0
+    ],
+    "contoursSmoothed": 1,
+    "contoursRetained": 0,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_89_seg_2",
+    "sourceSha256": "872578d1700e9efd2e1e1089d5593e4238c86f8c657b916b34b12dbc4884ca14",
+    "refinedSha256": "7fa526a7596593cec3a27a8cfc75d47cc443a253c6c506300348425572a469df",
+    "inkOverlapVsPreviousVector": 0.88216,
+    "maximumContourDisplacementPixels": 0.9362,
+    "componentsAndHolesAboveOneSourcePixel": [
+      1,
+      9
+    ],
+    "contoursSmoothed": 11,
+    "contoursRetained": 1,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_89_seg_3",
+    "sourceSha256": "69fdd8d385ce15f8129d9cc975da1361da0729bd225c03c5e9d85866c755d3fa",
+    "refinedSha256": "13a131f3a652918edd08f8597b5bceb52593af082cf6c85bb539a73727e6f14b",
+    "inkOverlapVsPreviousVector": 0.96395,
+    "maximumContourDisplacementPixels": 0.8684,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      2
+    ],
+    "contoursSmoothed": 5,
+    "contoursRetained": 1,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_89_seg_4",
+    "sourceSha256": "5f4e2887a9ce20c301dfc29115e2647c80bdadb28b4952b5a2dfa7ff056f9392",
+    "refinedSha256": "c4e4d6b26cc78d5b0efcb9e1ba4fbff8d236a3830df619ec3579eda3a2b5b314",
+    "inkOverlapVsPreviousVector": 0.87948,
+    "maximumContourDisplacementPixels": 0.8817,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      2
+    ],
+    "contoursSmoothed": 4,
+    "contoursRetained": 0,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_90_seg_0",
+    "sourceSha256": "b9b08a3c5d5d0ba0ff7419f1d32518eb38a9de1630e09a084969ffdcb5ff1441",
+    "refinedSha256": "89cadd70dc88f29c279df3dd5cb6d9c2348fb9c72bee8badac50d0bd910765c4",
+    "inkOverlapVsPreviousVector": 0.88272,
+    "maximumContourDisplacementPixels": 0.8598,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      2
+    ],
+    "contoursSmoothed": 4,
+    "contoursRetained": 0,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_90_seg_1",
+    "sourceSha256": "f5bff717fa3539823004347c774c4180d6a7f32b66f7ece5717e5b71153ab1d0",
+    "refinedSha256": "4e30c74fa1ee9a050d360cf9665cfeaf2bbdb45a2cdb2f26e89556a656fbf220",
+    "inkOverlapVsPreviousVector": 0.98506,
+    "maximumContourDisplacementPixels": 0.8706,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      4
+    ],
+    "contoursSmoothed": 5,
+    "contoursRetained": 2,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_90_seg_2",
+    "sourceSha256": "1331caa76df6b2407db04e0fdbefc6b258583bb314165f8225b88a93bea25632",
+    "refinedSha256": "a0d9fee4835ddf2a8478c59201f626fe4a20acccd3653ff86d7dda4171ba11d0",
+    "inkOverlapVsPreviousVector": 0.97668,
+    "maximumContourDisplacementPixels": 0.8992,
+    "componentsAndHolesAboveOneSourcePixel": [
+      2,
+      2
+    ],
+    "contoursSmoothed": 4,
+    "contoursRetained": 1,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  },
+  {
+    "id": "page_90_seg_3",
+    "sourceSha256": "70a99b8077118f72ebd4eef899fd3ff55d0d1f74c425830300f86acb64a33e0b",
+    "refinedSha256": "5551d20eb8b36664c73c2f560ad0abb0c33911de08966fde6f49e46ae29b58be",
+    "inkOverlapVsPreviousVector": 0.87182,
+    "maximumContourDisplacementPixels": 0.8756,
+    "componentsAndHolesAboveOneSourcePixel": [
+      1,
+      7
+    ],
+    "contoursSmoothed": 8,
+    "contoursRetained": 0,
+    "comparisonRenderScale": 4,
+    "method": "bounded local Gaussian smoothing, periodic cubic Bezier, separate contours, topology guard",
+    "status": "technical checks passed; original retained"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "cameraTest": "synthetic colored marker video; physical camera not tested",
+  "checks": [
+    "point creation",
+    "same-method before-after",
+    "colored-marker tracking",
+    "stream stops on unmount",
+    "JSON export",
+    "reject malformed import",
+    "reload persistence",
+    "320/390/768/1024/1440 without overflow"
+  ],
+  "errors": []
+}
