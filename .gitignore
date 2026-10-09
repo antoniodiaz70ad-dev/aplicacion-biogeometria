@@ -1,0 +1,11 @@
+node_modules/
+dist/
+vista-previa.html
+.env
+.env.*
+!.env.example
+.vercel/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
