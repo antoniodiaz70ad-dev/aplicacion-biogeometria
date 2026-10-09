@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { MapPin } from 'lucide-react';
+import 'leaflet/dist/leaflet.css';
 
 export type Location = { latitude: number; longitude: number; accuracy: number | null; capturedAt: string; source: 'dispositivo' | 'manual' };
 export function validLocation(value: unknown): value is Location {
@@ -10,6 +11,32 @@ export function validLocation(value: unknown): value is Location {
     && typeof v.capturedAt === 'string' && v.capturedAt.length <= 100 && !Number.isNaN(Date.parse(v.capturedAt));
 }
 
+function MapCanvas({ latitude, longitude, accuracy, zoom, revision }: { latitude: number; longitude: number; accuracy: number | null; zoom: number; revision: number }) {
+  const container = useRef<HTMLDivElement>(null);
+  const [status, setStatus] = useState('Cargando cartografía…');
+  useEffect(() => {
+    let cancelled = false;
+    let dispose: (() => void) | undefined;
+    setStatus('Cargando cartografía…');
+    void import('leaflet').then(({ default: L }) => {
+      if (cancelled || !container.current) return;
+      const map = L.map(container.current, { scrollWheelZoom: false, minZoom: 2, maxZoom: 19 }).setView([latitude, longitude], zoom);
+      dispose = () => map.remove();
+      const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, referrerPolicy: 'strict-origin-when-cross-origin', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors' });
+      tiles.on('tileload', () => { if (!cancelled) setStatus(''); });
+      tiles.on('tileerror', () => { if (!cancelled) setStatus('No se pudo cargar parte del mapa. Revisa tu conexión o pulsa «Volver al marcador» para reintentar.'); });
+      tiles.addTo(map);
+      L.marker([latitude, longitude], { title: 'Ubicación del lugar', icon: L.divIcon({ className: 'place-map-marker', html: '<span></span>', iconSize: [24, 24], iconAnchor: [12, 12] }) }).addTo(map);
+      if (accuracy !== null && accuracy > 0) L.circle([latitude, longitude], { radius: accuracy, color: '#264e43', weight: 2, fillOpacity: .12, interactive: false }).addTo(map);
+      const resize = new ResizeObserver(() => map.invalidateSize());
+      resize.observe(container.current);
+      dispose = () => { resize.disconnect(); map.remove(); };
+    }).catch(() => { if (!cancelled) setStatus('No se pudo iniciar el mapa. Reintenta con «Volver al marcador».'); });
+    return () => { cancelled = true; dispose?.(); };
+  }, [latitude, longitude, accuracy, zoom, revision]);
+  return <><div ref={container} className="map-frame" role="region" aria-label="Mapa interactivo del lugar" />{status && <p className="detail-note" role="status">{status}</p>}</>;
+}
+
 function PlaceMap({ location }: { location?: Location }) {
   const [visible, setVisible] = useState(false);
   const [scale, setScale] = useState<'cerca' | 'barrio' | 'zona'>('barrio');
@@ -17,18 +44,15 @@ function PlaceMap({ location }: { location?: Location }) {
   // A public landmark makes the empty state demonstrable without saving a location.
   const latitude = location?.latitude ?? 48.8584, longitude = location?.longitude ?? 2.2945;
   const supported = Math.abs(latitude) <= 85.05112878;
-  const span = scale === 'cerca' ? .0015 : scale === 'barrio' ? .006 : .04;
-  const lonSpan = Math.min(180, span / Math.max(.087, Math.cos(latitude * Math.PI / 180)));
-  const bbox = [Math.max(-180, longitude - lonSpan), Math.max(-85.05112878, latitude - span), Math.min(180, longitude + lonSpan), Math.min(85.05112878, latitude + span)].join(',');
-  const src = `https://www.openstreetmap.org/export/embed.html?${new URLSearchParams({ bbox, layer: 'mapnik', marker: `${latitude},${longitude}` })}`;
+  const zoom = scale === 'cerca' ? 18 : scale === 'barrio' ? 16 : 13;
   return <div className="place-map" aria-label="Mapa dentro de la plataforma">
     <div className="map-heading"><div><p className="eyebrow">VISTA GEOGRÁFICA</p><h3>{location ? 'Tu lugar, aquí.' : 'Explora el mapa.'}</h3></div>{visible && <button className="text-button" type="button" onClick={() => setVisible(false)}>Cerrar mapa</button>}</div>
     {!location && <p className="detail-note">Ejemplo: Torre Eiffel, París. No usa tu ubicación ni guarda estas coordenadas en tu espacio.</p>}
     {!supported ? <p role="status">El mapa de calles no cubre estas latitudes polares. Tus coordenadas se conservan en el registro.</p> : <>
       {!visible ? <div className="map-placeholder"><MapPin size={30} aria-hidden="true" /><p>{location ? 'Visualiza el inmueble y su entorno sin salir de Espacios.' : 'Prueba el visor; después puedes usar la ubicación de tu dispositivo.'}</p><p className="detail-note">Al cargar el mapa, OpenStreetMap recibe {location ? 'las coordenadas del lugar' : 'las coordenadas públicas del ejemplo'} y tu conexión para mostrar la cartografía.</p><button className="button secondary" type="button" onClick={() => setVisible(true)}>{location ? 'Mostrar mapa aquí' : 'Ver ejemplo de mapa'}</button></div> : <>
         <div className="map-toolbar" aria-label="Escala del mapa">{(['cerca', 'barrio', 'zona'] as const).map(value => <button className="button secondary" type="button" key={value} aria-pressed={scale === value} onClick={() => setScale(value)}>{value === 'cerca' ? 'Cerca del lugar' : value === 'barrio' ? 'Barrio' : 'Zona amplia'}</button>)}<button className="text-button" type="button" onClick={() => setRevision(value => value + 1)}>Volver al marcador</button></div>
-        <iframe key={`${scale}-${revision}`} className="map-frame" title={location ? 'Mapa de la ubicación del lugar' : 'Mapa de ejemplo: Torre Eiffel, París'} src={src} referrerPolicy="no-referrer" />
-        <p className="detail-note">Arrastra para explorar y usa +/− para acercar o alejar. El marcador representa {location ? 'las coordenadas guardadas' : 'un lugar de ejemplo'}; mover el mapa no cambia tu registro. Cartografía © OpenStreetMap contributors.</p>
+        <MapCanvas latitude={latitude} longitude={longitude} accuracy={location?.accuracy ?? null} zoom={zoom} revision={revision} />
+        <p className="detail-note">Arrastra para explorar y usa +/− o el gesto de pellizcar para acercar o alejar. El marcador representa {location ? 'las coordenadas guardadas' : 'un lugar de ejemplo'}; mover el mapa no cambia tu registro. {location?.accuracy != null ? ' El círculo indica la precisión estimada, no una zona de anomalías.' : ''}</p>
         <p className="detail-note">Si no carga, revisa tu conexión o pulsa «Volver al marcador» para reintentarlo.</p>
       </>}
     </>}
