@@ -31,3 +31,8 @@ Compilación TypeScript/Vite, comprobación del catálogo y flujos Playwright lo
 PDF aportado: BioGeometry Signatures, Ibrahim Karim, 224 páginas.
 Tutorial consultado: https://www.bgemitters.com/tutorial (12 octubre 2026).
 Manual oficial de péndulos: https://www.biogeometry.ca/_files/ugd/35c39f_705ecd0126124ee1937ab50c560a094a.pdf
+
+
+## Cotejo completado · 12 de octubre de 2026
+
+La revisión editorial pendiente en la entrega inicial queda sustituida por el cotejo de las 262 firmas de las páginas PDF 89–153. Se recuperaron 17 firmas, se completaron 98 títulos y se conservaron los 245 identificadores previos. Los recorridos animados siguen pendientes: las referencias conservan marcas y números del PDF. Ver COTEJO.md.
