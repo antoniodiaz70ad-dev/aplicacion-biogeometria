@@ -1,10 +1,17 @@
 {
   "sourcePdfSha256": "657c331a226d25f24becbf06e34a406dcb53f3ae935f6fac986716233260d5b3",
   "sourcePdfPages": 224,
-  "assets": 246,
-  "reviewedCaptions": 9,
-  "sourceMatchOver70pct": 147,
+  "cataloguePages": [
+    89,
+    153
+  ],
+  "assets": 263,
+  "signatures": 262,
+  "reviewedCaptions": 262,
+  "newSignatures": 17,
+  "previousIdsPreserved": 245,
+  "completedCaptions": 98,
+  "correctedNonemptyCaptions": 0,
   "minimumVectorFidelity": 1.0,
-  "meanVectorFidelity": 1.0,
-  "meaning": "SourceMatch is pixel overlap after normalization, not clinical confidence. VectorFidelity is pixel overlap against the cleaned mask, not therapeutic validation."
+  "method": "Reconstruction from the complete PDF image fragments in each caption cell; template matching preserves legacy IDs. Visual review of all 262 diagrams and their page captions. No guessed anatomical uses or fabricated trajectories."
 }
