@@ -9,3 +9,10 @@ __pycache__/
 *.pyc
 *.log
 .DS_Store
+
+# Generated from the checked, versioned catalogue archive.
+public/verified-figures/
+public/source-pages/151.webp
+public/source-pages/152.webp
+public/source-pages/153.webp
+tmp/

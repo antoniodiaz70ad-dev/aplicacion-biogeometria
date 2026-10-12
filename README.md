@@ -21,7 +21,7 @@ En Vercel: proyecto Vite, comando de instalación `npm ci`, compilación `npm ru
 
 ## Qué funciona
 
-- Atlas de 246 recortes reales, búsqueda, grupos, favoritos y referencias visibles. La vista inicial muestra nueve correspondencias revisadas.
+- Atlas de 262 firmas cotejadas y una ilustración de instrumento, con búsqueda, grupos, favoritos y referencias visibles.
 - Taller: dibujo limpio, recorte original, cuadrícula, ampliación y colores; trazado con ratón o pantalla táctil, deshacer y exportación de trazo PNG.
 - Exportación SVG de la forma recuperada; impresión A4 con ancho elegido, límite de altura para evitar recortes y línea de calibración de 100 mm.
 - Temporizador de observación de 1, 3 o 5 minutos, con pausa y reanudación.
@@ -32,9 +32,9 @@ Las notas y los favoritos se guardan **en este navegador y dispositivo**. No hay
 
 ## Dibujos y revisión
 
-La fuente del catálogo es **BioGeometry Signatures**, de Ibrahim Karim, PDF de **224 páginas**. Se recuperaron 246 PNG: 245 posibles firmas y una ilustración de instrumento. Las páginas del catálogo son ordinales del PDF, no necesariamente las páginas impresas.
+La fuente del catálogo es **BioGeometry Signatures**, de Ibrahim Karim, PDF de **224 páginas**. El catálogo actual contiene 263 recursos: 262 firmas y una ilustración de instrumento. Las páginas del catálogo son ordinales del PDF, no necesariamente las páginas impresas.
 
-Se cotejaron manualmente imagen y título de nueve recortes de las páginas PDF 89 y 90. Los otros 237 permanecen pendientes. Los títulos automáticos con correspondencia débil se presentan como recortes sin clasificar; la propuesta original queda en el catálogo para revisión. El reconocimiento automático sirve de ayuda editorial y nunca determina eficacia o recomendaciones de salud.
+Se cotejaron documentalmente las 262 firmas de las páginas PDF 89–153. Se recuperaron 17 figuras ausentes, se completaron 98 títulos y se conservaron los 245 identificadores anteriores. Las figuras con varios inicios numerados se distinguen en la práctica. Esto no valida efectos sobre la salud. Detalle en `docs/COTEJO.md` y `docs/catalogue-audit.json`.
 
 Los SVG representan el contorno de la tinta del escaneo, con fondo retirado y proporciones conservadas. No se inventaron trazos ni se rediseñó la firma. Se filtra ruido de componentes menores de seis píxeles; por eso la equivalencia se mide respecto a la máscara de tinta limpiada, no al escaneo íntegro. La vectorización no recupera detalle que el recorte original no contiene. Revisa la página documental antes de considerar cerrado cualquier dibujo.
 
