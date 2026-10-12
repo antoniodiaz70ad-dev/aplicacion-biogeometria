@@ -1,8 +1,8 @@
-import { backgroundBounds, downloadFile, figuresForDesign, type Design } from './compositions';
+import { effectiveBackground, backgroundBounds, downloadFile, figuresForDesign, type Design } from './compositions';
 async function image(src:string){const i=new Image();i.src=src;await i.decode();return i;}
 export async function renderSheet(d:Design){const mm=d.paper==='A4'?[210,297]:[216,279];const scale=1800/mm[0],c=document.createElement('canvas');c.width=1800;c.height=Math.round(mm[1]*scale);const ctx=c.getContext('2d')!;ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);const left=12*scale,side=(mm[0]-24)*scale,top=32*scale,u=side/1000;
  ctx.fillStyle='#264e43';ctx.font=`${5*scale}px Georgia`;ctx.fillText(d.title||'Mi composición',left,14*scale);ctx.font=`${2.5*scale}px Arial`;ctx.fillText('COMPOSICIÓN DE ESTUDIO · BIOGEOMETRY SIGNATURES · IBRAHIM KARIM',left,21*scale);
- if(d.background){const art=await image(d.background.data),b=backgroundBounds(d.background.ratio);ctx.drawImage(art,left+b.x*u,top+b.y*u,b.width*u,b.height*u);}
+ const background=effectiveBackground(d);if(background){const art=await image(background.data),b=backgroundBounds(background.ratio);ctx.drawImage(art,left+b.x*u,top+b.y*u,b.width*u,b.height*u);}
  const drawings=await Promise.all(d.items.map(async item=>{const f=figuresForDesign.find(f=>f.id===item.figureId)!;return {item,f,art:await image(f.vector)};}));
 
  if(d.photo){const p=d.photo,art=await image(p.data),cover=Math.max(220/art.width,220/art.height)*p.zoom;ctx.save();ctx.beginPath();ctx.rect(left+390*u,top+390*u,220*u,220*u);ctx.clip();ctx.drawImage(art,left+(500+Math.max(-(art.width*cover-220)/2,Math.min((art.width*cover-220)/2,p.x))-art.width*cover/2)*u,top+(500+Math.max(-(art.height*cover-220)/2,Math.min((art.height*cover-220)/2,p.y))-art.height*cover/2)*u,art.width*cover*u,art.height*cover*u);ctx.restore();}
