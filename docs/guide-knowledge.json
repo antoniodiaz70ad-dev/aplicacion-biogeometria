@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "date": "2026-10-12",
+  "numbering": "one_based_pdf_ordinal",
+  "scope": "reviewed_documentary_paraphrases_not_ai_endpoint",
+  "sources": [
+    {
+      "id": "signatures",
+      "title": "BioGeometry Signatures",
+      "coverage": "full_supplied_pdf",
+      "ocr_quality": "normal"
+    },
+    {
+      "id": "back_to_future",
+      "title": "Back to a Future for Mankind",
+      "coverage": "full_supplied_pdf",
+      "ocr_quality": "normal"
+    },
+    {
+      "id": "hidden_reality_fragment",
+      "title": "Hidden Reality: The BioGeometry Physics of Quality (fragmento)",
+      "coverage": "partial_book_photographed_spreads",
+      "ocr_quality": "low",
+      "edition": "unconfirmed"
+    },
+    {
+      "id": "emitter",
+      "title": "BioGeometry BioSignatures Emitter",
+      "coverage": "full_supplied_pdf",
+      "ocr_quality": "normal"
+    },
+    {
+      "id": "pendulum_manual",
+      "title": "The BioGeometry Horizontal & Vertical Pendulum Set",
+      "coverage": "full_supplied_pdf",
+      "ocr_quality": "normal",
+      "url": "https://www.biogeometry.ca/_files/ugd/35c39f_705ecd0126124ee1937ab50c560a094a.pdf",
+      "copyright_year": 2015
+    }
+  ],
+  "external_references": [
+    {
+      "id": "official_faq",
+      "url": "https://www.biogeometry.ca/biogeometry-faq",
+      "reviewed_sections": [
+        "BG16 versus IKUP",
+        "not medical diagnosis or treatment"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "reading_paths",
+      "route": "learn",
+      "question": "¿Por dónde empiezo?",
+      "answer": "Karim propone tres rutas de lectura: práctica, conceptual y espiritual. Elige tu propósito; en la ruta práctica empieza por comprender y practicar las firmas antes de profundizar en teoría.",
+      "citations": [
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            9
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "photo_center",
+      "route": "emitter",
+      "question": "¿Dónde pongo mi foto?",
+      "answer": "La fuente reserva el centro para la foto y describe firmas a sus lados. El editor permite añadirla digitalmente y ajustar el encuadre; su colocación no implica un efecto demostrado sobre la persona.",
+      "citations": [
+        {
+          "source_id": "emitter",
+          "pdf_pages": [
+            1
+          ]
+        },
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            194,
+            195
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "figure_placement",
+      "route": "emitter",
+      "question": "¿Dónde coloco las firmas?",
+      "answer": "El libro describe añadir firmas junto al testigo central y a la combinación general. Mantener separación visual y evitar solapamientos son decisiones del editor. No se deduce una posición obligatoria por órgano en la foto.",
+      "citations": [
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            194,
+            195
+          ]
+        },
+        {
+          "source_id": "emitter",
+          "pdf_pages": [
+            1
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": [
+        "separacion terapeutica exacta",
+        "posicion obligatoria por figura"
+      ]
+    },
+    {
+      "id": "daily_maintenance",
+      "route": "emitter",
+      "question": "¿Qué mantenimiento describe este PDF?",
+      "answer": "El PDF aportado pide retirar el polvo diariamente; también indica no plastificar, cubrir ni guardar en un cajón. Presentar estas indicaciones como instrucciones de esa fuente, sin prometer resultados ni mezclarlas con otros rituales.",
+      "citations": [
+        {
+          "source_id": "emitter",
+          "pdf_pages": [
+            1
+          ]
+        },
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            194
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "tracing",
+      "route": "learn",
+      "question": "¿Cómo practico el trazo?",
+      "answer": "Según el libro, se inicia en el punto y sentido de la flecha; la flecha no se copia. Recomienda memorizar el dibujo mediante práctica para ejecutarlo de manera continua. El recorrido digital completo y el orden de cruces no están reconstruidos automáticamente.",
+      "citations": [
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            78,
+            188,
+            189
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "wire_crossings",
+      "route": "learn",
+      "question": "¿Puedo convertir cualquier SVG en una firma de alambre?",
+      "answer": "El libro distingue el dibujo del trabajo en alambre: los cruces requieren decisiones específicas y experiencia. Un contorno vectorizado no determina si el alambre pasa por arriba o por abajo; la aplicación debe conservar esa incertidumbre.",
+      "citations": [
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            189,
+            190
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": [
+        "orden de cada cruce"
+      ]
+    },
+    {
+      "id": "vertical_preparation",
+      "route": "spaces",
+      "question": "¿Cómo preparo el péndulo vertical que describe el manual?",
+      "answer": "Para el modelo del juego oficial, el manual usa 7 cm desde el cuerpo como referencia inicial, ambos diales R y papel rojo; después comprueba otro color y un ajuste incorrecto. Confirmar modelo y consultar los dibujos de los diales antes de intentar el procedimiento.",
+      "citations": [
+        {
+          "source_id": "pendulum_manual",
+          "pdf_pages": [
+            18,
+            19
+          ]
+        }
+      ],
+      "instrument_scope": "Vertical BioGeometry",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": [
+        "confirmacion del modelo real y sus accesorios"
+      ]
+    },
+    {
+      "id": "horizontal_preparation",
+      "route": "spaces",
+      "question": "¿El horizontal se prepara igual?",
+      "answer": "No. El manual indica 6 cm desde el cuerpo como referencia del horizontal y comprobaciones separadas de color. Para el procedimiento BG3 del manual se prueban O, I, UV y −G por separado; no trasladar esos ajustes al vertical.",
+      "citations": [
+        {
+          "source_id": "pendulum_manual",
+          "pdf_pages": [
+            15,
+            16,
+            17
+          ]
+        }
+      ],
+      "instrument_scope": "Horizontal BioGeometry",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "instrument_difference",
+      "route": "spaces",
+      "question": "¿Mi péndulo vertical basta para comprobar toda la corrección?",
+      "answer": "El procedimiento del manual separa observar V−G con el vertical de comprobar las componentes BG3 con el horizontal. Sólo tener el vertical no completa las dos verificaciones descritas. Un movimiento horario no significa siempre un resultado favorable.",
+      "citations": [
+        {
+          "source_id": "pendulum_manual",
+          "pdf_pages": [
+            19,
+            20,
+            21
+          ]
+        }
+      ],
+      "instrument_scope": "Vertical BioGeometry",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "rod_accessory",
+      "route": "spaces",
+      "question": "¿Mis varillas de cobre sustituyen los accesorios del péndulo?",
+      "answer": "El manual describe accesorios de color unidos al péndulo para los ajustes de cuadrículas. No identifica las varillas de cobre del operador como sustitutos. Registrar cruces y recorridos de varillas es documentación de observaciones, no una confirmación automática de líneas.",
+      "citations": [
+        {
+          "source_id": "pendulum_manual",
+          "pdf_pages": [
+            20
+          ]
+        }
+      ],
+      "instrument_scope": "Varillas de cobre",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": [
+        "fuente especifica del modelo de varillas"
+      ]
+    },
+    {
+      "id": "record_fields",
+      "route": "spaces",
+      "question": "¿Qué debo registrar del lugar?",
+      "answer": "El manual recomienda lugar, fecha, hora, orientación respecto al norte, instrumento y calibración. La plataforma añade punto del plano, condiciones, movimiento observado y revisiones. La brújula orienta el registro; GPS y brújula no miden BG3.",
+      "citations": [
+        {
+          "source_id": "pendulum_manual",
+          "pdf_pages": [
+            23
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "temporary_clearing",
+      "route": "spaces",
+      "question": "¿Clearing Body Earth Radiation corrige mi habitación?",
+      "answer": "El libro describe esa firma como una aplicación temporal sobre el cuerpo y aclara que dejarla puesta no supone protección continua frente a la radiación terrestre. No usarla como corrección permanente del inmueble.",
+      "citations": [
+        {
+          "source_id": "signatures",
+          "pdf_pages": [
+            185
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    },
+    {
+      "id": "grid_layout",
+      "route": "spaces",
+      "question": "¿Dibujo automáticamente las cuadrículas cada cierta distancia?",
+      "answer": "Back to a Future describe orientaciones y tamaños aproximados de Hartmann y Curry y advierte que varían entre lugares. Es un planteamiento del autor, no una detección del mapa. No crear líneas reales por una plantilla geométrica o por GPS.",
+      "citations": [
+        {
+          "source_id": "back_to_future",
+          "pdf_pages": [
+            247,
+            248,
+            249,
+            250
+          ]
+        }
+      ],
+      "instrument_scope": "all",
+      "claim_type": "attributed_source",
+      "review_status": "reviewed_paraphrase",
+      "documentary_confidence": "high",
+      "scientific_efficacy": "not_evaluated",
+      "missing": []
+    }
+  ],
+  "unresolved": [
+    "Hidden Reality edition and complete volume",
+    "recording URLs and timecodes for ZIP transcripts",
+    "therapeutic print scale or spacing",
+    "signature selection by disease",
+    "Kain table identity and source"
+  ],
+  "application_rules": [
+    "Keep author assertions attributed",
+    "Never auto-select a medical cure",
+    "Never equate clockwise with safe or harmful without instrument setting",
+    "Use only reviewed passages for operational instructions",
+    "No invented citations or printed page labels"
+  ]
+}
