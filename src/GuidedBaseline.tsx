@@ -1,4 +1,5 @@
 import RoomCompass, { northAngle } from './RoomCompass';
+import GuideAssistant from './GuideAssistant';
 import { useEffect, useState } from 'react';
 import SpaceLocation from './SpaceLocation';
 import { instruments, movements, rodMovements, interpretations, type Baseline, type Preparation, type Trial } from './baseline';
@@ -32,6 +33,7 @@ export default function GuidedBaseline({ room, points, selected, onSelect, onAdd
   return <section className="space-card guided-baseline" aria-label="Protocolo guiado del estado inicial">
     <p className="eyebrow">PROTOCOLO DE LUGARES · V1</p><h2>Empieza por tu lugar.</h2><p>Un recorrido: define la habitación, prepara el instrumento, marca un punto, observa y revisa antes de guardar. Las repeticiones son un control propuesto por la plataforma; no una medición automática de energía.</p>
     <ol className="guided-steps" aria-label="Pasos del protocolo">{['Lugar','Instrumento','Puntos','Observaciones','Revisión'].map((name, i) => <li key={name} aria-current={Math.min(step, 4) === i ? 'step' : undefined}><span>{i + 1}</span>{name}</li>)}</ol>
+    <GuideAssistant route="spaces" step={step} instrument={prep.instrument} />
     {step === 0 && <div><h3>1 · Define una habitación.</h3><p>Empieza con un dormitorio o escritorio. Mide el ancho y el fondo; el GPS es opcional y sólo ubica el inmueble.</p><div className="space-form-grid"><label>Nombre de la habitación<input aria-label="Habitación del recorrido" maxLength={100} value={room.name} onChange={e => onRoom({name:e.target.value})} placeholder="Dormitorio, oficina…" /></label><label>Ancho · m<input aria-label="Ancho del recorrido" type="number" min={1} max={30} step=".1" value={room.width} onChange={e => {const n=e.target.valueAsNumber;if(Number.isFinite(n)&&n>=1&&n<=30)onRoom({width:n});}} /></label><label>Fondo · m<input aria-label="Fondo del recorrido" type="number" min={1} max={30} step=".1" value={room.height} onChange={e => {const n=e.target.valueAsNumber;if(Number.isFinite(n)&&n>=1&&n<=30)onRoom({height:n});}} /></label></div><RoomCompass room={room} onChange={onRoom} /><details className="guided-location"><summary>Ubicación GPS y mapa · opcional</summary><SpaceLocation location={room.location} onChange={location => onRoom({location})} /></details><button className="button primary" disabled={!roomReady} onClick={() => setStep(1)}>Continuar al instrumento</button></div>}
     {step === 1 && <div><div className="space-form-grid">
       <label>Operador<input aria-label="Operador del protocolo" maxLength={2000} value={prep.operator} onChange={e => field('operator', e.target.value)} /></label>
